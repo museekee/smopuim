@@ -1,3 +1,5 @@
+@import url(./_scrollbar.scss);
+
 @font-face {
   font-family: 'Noto Sans';
   src: url(./../assets/fonts/NotoSansKR-Regular.otf) format("truetype");
@@ -114,6 +116,9 @@ span {
     #taskIcons {
       display: flex;
       height: max-content;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      overflow: overlay;
     }
     #taskTime {
       display: grid;
