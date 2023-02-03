@@ -18,6 +18,7 @@ button {
   outline: none;
   appearance: none;
   background: none;
+  cursor: pointer;
 }
 
 #root {

@@ -5,6 +5,7 @@ import logo from "./logo.svg"
 import { useEffect, useState } from "react"
 import Internet from "./assets/images/internet.svg"
 import Window from "./components/window"
+import Browser from "./components/browser"
 
 function Main() {
   const Clock = () =>{
@@ -35,7 +36,7 @@ function Main() {
           <span>시작</span>
         </button>
         <div id={styles["taskIcons"]}>
-          <TaskIcon />
+          <TaskIcon icon={Internet} onclick={() => opencloseWindow("internet")} />
         </div>
         <div id={styles["taskTime"]}>
           <span>{
@@ -55,8 +56,8 @@ function Main() {
       </div>
     </div>
     <div id={styles["windows"]}>
-      <Window width={1024} height={768} id="internet">
-        <iframe className={styles["fullsize"]} src="https://daum.net" title="브라우저" />
+      <Window width={1600} height={900} id="internet">
+        <Browser />
       </Window>
     </div>
     </>

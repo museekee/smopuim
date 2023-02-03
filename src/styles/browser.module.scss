@@ -1,0 +1,39 @@
+iframe {
+  width: calc(100% - 4px) !important;
+  height: calc(100% - 45px);
+}
+.header {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+  gap: 10px;
+  align-items: center;
+  height: 30px;
+  padding: 5px;
+
+  button {
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bolder;
+    transition: all 250ms;
+  }
+  button:hover {
+    background: #00000033;
+  }
+
+  .locationContainer {
+    background-color: #00000088;
+    border-radius: 100px;
+    padding: 5px;
+
+    input {
+      background: none;
+      color: #ffffff;
+      font-size: 15px;
+      padding-left: 10px;
+      outline: none;
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

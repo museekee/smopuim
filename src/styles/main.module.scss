@@ -159,18 +159,12 @@ span {
         height: 100%;
         aspect-ratio: 1 / 1;
         margin-left: 5px;
-        cursor: pointer;
       }
       .close {
         background: #ff0000;
       }
       .maximum {
         background: #00ff00;
-      }
-    }
-    .content {
-      iframe {
-        width: calc(100% - 4px) !important;
       }
     }
     .header:active {
@@ -193,5 +187,5 @@ span {
 }
 .invisibility {
   visibility: hidden !important;
-  transform: scale(0.4);
+  transform: scale(0);
 }
