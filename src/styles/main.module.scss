@@ -132,3 +132,63 @@ span {
     }
   }
 }
+#windows {
+  // display: none;
+  
+  .window {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background: #ffffff;
+    transition: all 250ms;
+    visibility: visible;
+    min-width: 0px;
+    min-height: 0px;
+
+    .header {
+      display: flex;
+      background: #888888;
+      height: 20px;
+      padding: 5px;
+      justify-content: flex-end;
+      
+      .button {
+        border-radius: 50%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+      .close {
+        background: #ff0000;
+      }
+      .maximum {
+        background: #00ff00;
+      }
+    }
+    .content {
+      iframe {
+        width: calc(100% - 4px);
+      }
+    }
+    .header:active {
+      cursor: move;
+    }
+  }
+}
+
+
+
+
+
+.fullsize {
+  width: 100%;
+  height: 100%;
+}
+.invisibility {
+  visibility: hidden !important;
+  height: 0px !important;
+  width: 0px !important;
+}
