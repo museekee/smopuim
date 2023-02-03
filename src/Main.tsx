@@ -1,5 +1,6 @@
 import styles from "./styles/main.module.scss"
 import Icon from "./components/icon"
+import TaskIcon from "./components/taskIcon"
 import logo from "./logo.svg"
 import { useEffect, useState } from "react"
 
@@ -8,12 +9,10 @@ function Main() {
     const [date, setDate] = useState(()=> new Date())
 
     useEffect(() => {
-      const timeId = setInterval(() => tick(), 1000)
-      console.log('setInteval')
+      const timeId = setInterval(() => tick(), 500)
 
       return () => {
         clearInterval(timeId)
-        console.log('clearInterval')
       }
     })
     const tick =() =>{
@@ -35,10 +34,22 @@ function Main() {
           <span>시작</span>
         </button>
         <div id={styles["taskIcons"]}>
-
+          <TaskIcon />
         </div>
         <div id={styles["taskTime"]}>
-          <span>{Clock().toTimeString()}</span>
+          <span>{
+            new Intl.DateTimeFormat("ko", {
+              hour: "numeric",
+              minute: "numeric"
+            }).format(Clock())
+          }</span>
+          <span>{
+            new Intl.DateTimeFormat("ko", {
+              year: "numeric",
+              month: "numeric",
+              day: "numeric"
+            }).format(Clock())
+          }</span>
         </div>
       </div>
     </div>

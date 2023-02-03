@@ -58,22 +58,24 @@ span {
   }
 
   #taskbar {
-    display: flex;
-    flex-direction: row;
+    display: grid;
     background: linear-gradient(to bottom, #4386d7 15%, #245fdd 15% 85%);
-    padding: 5px;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
 
     .icon {
       transition: transform 100ms, background 500ms;
       border-radius: 5px;
-      padding: 7px;
+      padding: 5px;
       
       img {
-        height: 100%;
+        aspect-ratio: 1 / 1;
+        height: 31px;
       }
     }
 
-    .icon:focus {
+    .icon:active {
       transform: scale(0.8);
     }
 
@@ -86,8 +88,9 @@ span {
       width: 120px;
       display: flex;
       align-items: center;
-      margin: -5px;
+      margin-left: -5px;
       border-radius: 0px 15px 15px 0px;
+      height: 100%;
       
       span {
         font-size: 18px;
@@ -105,7 +108,18 @@ span {
     }
 
     #taskIcons {
-      
+      display: flex;
+      height: max-content;
+    }
+    #taskTime {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      margin-left: auto;
+      margin-right: 10px;
+      span {
+        font-size: 13px;
+        color: #ffffff;
+      }
     }
   }
 }
