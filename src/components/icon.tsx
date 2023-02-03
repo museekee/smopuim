@@ -1,11 +1,13 @@
 import React from "react"
-import xIcon from "./../Assets/Images/xIcon.svg"
+import xIcon from "./../assets/images/xIcon.svg"
+import styles from "./../styles/main.module.scss"
 
 function Icon({name, image}: {name: string, image: string}) {
+    console.log(styles)
     return (
-        <button className="icon">
-            <img className="iconPic" src={image} />
-            <span className="desc">{name}</span>
+        <button className={styles["icon"]}>
+            <img className={styles["iconPic"]} src={image} alt={`${name} 이미지`} />
+            <span className={styles["desc"]}>{name}</span>
         </button>
     )
 }
