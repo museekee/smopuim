@@ -56,7 +56,7 @@ function Main() {
     </div>
     <div id={styles["windows"]}>
       <Window width={1024} height={768} id="internet">
-        <iframe className={styles["fullsize"]} src="http://localhost:3000" title="브라우저" />
+        <iframe className={styles["fullsize"]} src="https://daum.net" title="브라우저" />
       </Window>
     </div>
     </>
@@ -70,8 +70,7 @@ export function opencloseWindow(id: string) {
 export function maximumWindow(id: string) {
   const elem = document.getElementById(id)
   if (elem) {
-    elem.style.width = "100%"
-    elem.style.height = "calc(100% - 50px)"
+    elem.classList.toggle(styles["maximumsize"])
     elem.style.top = "0"
   }
 }

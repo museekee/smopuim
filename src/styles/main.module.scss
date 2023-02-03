@@ -170,7 +170,7 @@ span {
     }
     .content {
       iframe {
-        width: calc(100% - 4px);
+        width: calc(100% - 4px) !important;
       }
     }
     .header:active {
@@ -184,8 +184,12 @@ span {
 
 
 .fullsize {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
+}
+.maximumsize {
+  width: 100% !important;
+  height: calc(100% - 50px) !important;
 }
 .invisibility {
   visibility: hidden !important;
