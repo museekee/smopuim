@@ -27,7 +27,7 @@ function Main() {
     <>
     <div id={styles["main"]}>
       <div id={styles["icons"]}>
-        <Icon name="인터넷" image={Internet} onclick={() => opencloseWindow("internet")} />
+        <Icon name="인터넷" image={Internet} onclick={() => ClickCountCheck(2, () => opencloseWindow("internet"))} />
       </div>
       <div id={styles["taskbar"]}>
         <button id={styles["startBtn"]} className={styles["icon"]}>
@@ -63,6 +63,17 @@ function Main() {
   )
 }
 
+let clickCount = 0
+
+export function ClickCountCheck(n: number, callback: () => void) {
+	clickCount++
+	setTimeout(() => {
+		clickCount = 0
+	}, 500)
+	if (clickCount === n) {
+    callback()
+	}
+}
 export function opencloseWindow(id: string) {
   const elem = document.getElementById(id)
   if (elem) elem.classList.toggle(styles["invisibility"])
