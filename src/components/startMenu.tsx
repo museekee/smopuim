@@ -1,4 +1,4 @@
-import styles from "./../styles/main.module.scss"
+import styles from "./../styles/startMenu.module.scss"
 
 function StartMenu() {
   return (

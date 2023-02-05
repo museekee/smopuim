@@ -5,7 +5,7 @@ import logo from "./logo.svg"
 import { useEffect, useState } from "react"
 import Internet from "./assets/images/internet.svg"
 import Window from "./components/window"
-import Browser from "./components/browser"
+import Browser, { reset as browserReset } from "./components/windows/browser"
 
 function Main() {
   const Clock = () =>{
@@ -28,6 +28,9 @@ function Main() {
     <>
     <div id={styles["main"]}>
       <div id={styles["icons"]}>
+        <Icon name="인터넷" image={Internet} onclick={() => ClickCountCheck(2, () => opencloseWindow("internet"))} />
+        <Icon name="인터넷" image={Internet} onclick={() => ClickCountCheck(2, () => opencloseWindow("internet"))} />
+        <Icon name="인터넷" image={Internet} onclick={() => ClickCountCheck(2, () => opencloseWindow("internet"))} />
         <Icon name="인터넷" image={Internet} onclick={() => ClickCountCheck(2, () => opencloseWindow("internet"))} />
       </div>
       <div id={styles["taskbar"]}>
@@ -56,7 +59,7 @@ function Main() {
       </div>
     </div>
     <div id={styles["windows"]}>
-      <Window width={1600} height={900} id="internet">
+      <Window width={600} height={400} id="internet" reset={browserReset}>
         <Browser />
       </Window>
     </div>
@@ -77,7 +80,7 @@ export function ClickCountCheck(n: number, callback: () => void) {
 }
 export function opencloseWindow(id: string) {
   const elem = document.getElementById(id)
-  if (elem) elem.classList.toggle(styles["invisibility"])
+  if (elem) elem.classList.toggle(styles["visibility"])
 }
 export function maximumWindow(id: string) {
   const elem = document.getElementById(id)

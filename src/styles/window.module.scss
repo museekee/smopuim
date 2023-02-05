@@ -1,0 +1,39 @@
+.window {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  background: #ffffff;
+  transition: width 250ms, height 250ms, scale 100ms;
+  visibility: hidden;
+  min-width: 0px;
+  min-height: 0px;
+  scale: 0;
+  .header {
+    display: flex;
+    background: #888888;
+    height: 20px;
+    padding: 5px;
+    justify-content: flex-end;
+    
+    .button {
+      border-radius: 50%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      margin-left: 5px;
+    }
+    .close {
+      background: #ff0000;
+    }
+    .minimum {
+      background: #ffff00;
+    }
+    .maximum {
+      background: #00ff00;
+    }
+  }
+  .header:active {
+    cursor: move;
+  }
+}
