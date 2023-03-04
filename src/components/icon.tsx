@@ -3,11 +3,11 @@ import Draggable from "react-draggable"
 import xIcon from "./../assets/images/xIcon.svg"
 import styles from "./../styles/icon.module.scss"
 
-function Icon({name, image, onclick}: {name: string, image: string, onclick: () => any}) {
+function Icon({name, image, onclick, onDoubleClick}: {name: string, image: string, onclick?: () => any, onDoubleClick?: () => any}) {
   const nr = React.useRef(null)
   return (
     <Draggable nodeRef={nr} grid={[85, 95]}>
-      <button className={styles["icon"]} onClick={onclick} ref={nr}>
+      <button className={styles["icon"]} onClick={onclick} onDoubleClick={onDoubleClick} ref={nr}>
         <div className={styles["iconPic"]} style={{backgroundImage: `url(${image})`, backgroundSize: "contain", backgroundPosition: "center", backgroundRepeat: "no-repeat"}} />
         <span className={styles["desc"]}>{name}</span>
       </button>
