@@ -1,4 +1,4 @@
-import { opencloseWindow, maximumWindow } from "../main"
+import { opencloseWindow, maximumWindow } from "../pages/main"
 import styles from "./../styles/window.module.scss"
 import Mstyles from "./../styles/main.module.scss"
 import Draggable from "react-draggable"

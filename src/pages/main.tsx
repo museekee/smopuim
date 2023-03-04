@@ -1,11 +1,11 @@
-import styles from "./styles/main.module.scss"
-import Icon from "./components/icon"
-import TaskIcon from "./components/taskIcon"
-import logo from "./logo.svg"
+import styles from "./../styles/main.module.scss"
+import Icon from "./../components/icon"
+import TaskIcon from "./../components/taskIcon"
+import logo from "./../logo.svg"
 import { useEffect, useState } from "react"
-import Internet from "./assets/images/internet.svg"
-import Window from "./components/window"
-import Browser, { reset as browserReset } from "./components/windows/browser"
+import Internet from "./../assets/images/internet.svg"
+import Window from "../components/window"
+import Browser, { reset as browserReset } from "./../components/windows/browser"
 
 function Main() {
   const Clock = () =>{
